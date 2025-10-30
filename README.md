@@ -40,7 +40,7 @@ frontend/
 └── package.json
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/<your-username>/task-tracker.git
+git clone https://github.com/umaGannamani/task-tracker-frontend.git
 cd task-tracker/frontend
 
 2️⃣ Install Dependencies
