@@ -6,7 +6,7 @@ import TaskForm from "./components/TaskForm";
 import InsightsPanel from "./components/InsightsPanel";
 import { FaPlus } from "react-icons/fa";
 
-const backendUrl = "http://localhost:4000";
+const backendUrl = "https://backend-1p5d.onrender.com/";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
