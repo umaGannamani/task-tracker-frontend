@@ -6,7 +6,8 @@ import TaskForm from "./components/TaskForm";
 import InsightsPanel from "./components/InsightsPanel";
 import { FaPlus } from "react-icons/fa";
 
-const backendUrl = "https://backend-1p5d.onrender.com/";
+// ✅ Use deployed backend URL
+const backendUrl = "https://backend-1p5d.onrender.com";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -18,7 +19,9 @@ const App = () => {
     try {
       const res = await fetch(`${backendUrl}/tasks`);
       const data = await res.json();
-      setTasks(data);
+
+      // ✅ Ensure data is always an array to prevent "filter is not a function" error
+      setTasks(Array.isArray(data) ? data : data.data || []);
     } catch (err) {
       console.error("Error fetching tasks:", err);
     }
